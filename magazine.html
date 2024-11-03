@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Viewer - ASCE & AIDIAS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="/src/css/magazine.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="../../public/images/co_logo.png" width="100" height="100" class="logoimg" alt="CO Logo">
+                </div>
+
+                <div class="anchors">
+                    <a href="/">Home</a>
+                    <a href="/members.html">Members</a>
+                    <a href="/magazine.html" class="active">Magazine</a>
+                    <a href="/events.html">Events</a>
+                    <a href="/social.html">Social Work</a>
+                </div>
+
+                <div class="logo">
+                    <img src="../../public/images/ai_logo.png" width="100" height="100" class="logoimg" alt="AI Logo">
+                </div>
+            </nav>
+        </header>
+
+        <div class="dropdown-container">
+            <label for="yearSelect">Select Year:</label>
+            <select id="yearSelect">
+                <option value="">Select a year</option>
+                <option value="../../public/magazines/2021-1.pdf">2021 (Issue 1)</option>
+                <option value="../../public/magazines/2021-2.pdf">2021 (Issue 2)</option>
+                <option value="../../public/magazines/2022-1.pdf">2022 (Issue 1)</option>
+                <option value="../../public/magazines/2022-2.pdf">2022 (Issue 2)</option>
+                <option value="../../public/magazines/2023.pdf">2023 (Issue 1)</option>
+                <option value="../../public/magazines/2023.pdf">2023 (Issue 2)</option>
+            </select>
+        </div>
+
+        <div id="popup">
+            <p>View magazine for <span id="selectedYear"></span>?</p>
+            <button onclick="showPDF()">Yes</button>
+            <button onclick="closePopup()">No</button>
+            <button onclick="downloadPDF()">Download</button>
+        </div>
+        
+        <div class="pdf-container">
+            <div class="pdf-viewer">
+            </div>
+        </div>
+    </div>
+        <footer class="footer">
+            <div class="dock-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Members</a></li>
+                            <li><a href="#">Magazines</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">Resources</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="mailto:yashbhavsar.dev2007@gmail.com?subject=ASCE and AIDIAS Website Feature Improvement">Report Bug / Suggest Feature</a></li>
+                            <li><a href="#">Accessability Statement</a></li>
+                            <li><a href="#">Privacy Statement</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:shubhamdeshmukhs741@gmail.com"><i class="fa fa-envelope"></i> Shubham Deshmukh</a></li>
+                            <li><a href="mailto:yashbhavsar.dev2007@gmail.com"><i class="fa fa-envelope"></i> Yash Bhavsar</a></li>
+                            <li><a href="mailto:surajwakhure@gmail.com"><i class="fa fa-envelope"></i> Suraj Wakhure</a></li>
+                            <li><a href="https://maps.app.goo.gl/umvXkpvA4B2TtR2W8"><i class="fas fa-map-marker-alt"></i> Government Polytechnic, Ch. Sambhajinagar</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://gpabad.ac.in/"><i class="far fa-id-card"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/showcase/asce-gpcs/about/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.linkedin.com/showcase/aidias-gpcs/about/"><i class="fab fa-linkedin-in"></i></a>
+
+                            <div id="copyright">
+                                © ASCE and AIDIAS Commitee 2024 All rights reserved.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script type="module" src="/src/js/magazine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+</body>
+</html>
