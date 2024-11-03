@@ -1,4 +1,4 @@
-import '../css/magazine.css';
+import '/src/css/magazine.css';
 
 const yearSelect = document.getElementById('yearSelect');
 const popup = document.getElementById('popup');
