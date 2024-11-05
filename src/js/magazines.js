@@ -1,11 +1,8 @@
-alert("Hello")
-
 const yearSelect = document.getElementById('yearSelect');
 const popup = document.getElementById('popup');
 const selectedYearText = document.getElementById('selectedYear');
 const pdfViewer = document.querySelector('.pdf-viewer');
 
-alert("Hello")
 // Listen for changes on the year select dropdown
 yearSelect?.addEventListener('change', () => {
     if (yearSelect.value) {
