@@ -1,0 +1,233 @@
+header a#Events {
+    color: #ffe600;
+}
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f8fa;
+}
+
+/* show-Container styling */
+.show-container {
+    max-width: 900px;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+/* Image styling */
+.header-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Heading styling */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 0.95em;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: block;
+}
+
+.desktop p {
+	height: 150px;
+	width: 500px;
+	margin: 50px auto;
+	position: relative;
+}
+
+img.showcase {
+	height: 100px;
+	position: absolute;
+	left: 0;
+	offset-path: path("m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30");
+	box-shadow: 1px 1px 3px #0008;
+	transition: transform 0.4s ease-out, offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84), box-shadow 0.3s,
+		z-index 0.3s;
+	z-index: 0;
+}
+
+img.showcase:hover {
+	transform: scale(3);
+	/* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
+	offset-path: path("m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0");
+	box-shadow: 3px 4px 10px #0006;
+	/* ensures that image gets on top of stack at the start of "popping" animation
+and gets back at the end of getting back. With smaller value, 2 different transitions would be needed */
+	z-index: 999;
+}
+
+/* 4 images */
+img.showcase:nth-last-child(4):first-child {
+	offset-distance: 10%;
+}
+img.showcase:nth-last-child(3):nth-child(2) {
+	offset-distance: 35%;
+}
+img.showcase:nth-last-child(2):nth-child(3) {
+	offset-distance: 65%;
+}
+img.showcase:last-child:nth-child(4) {
+	offset-distance: 90%;
+}
+
+/* 5 images */
+img.showcase:nth-last-child(5):first-child {
+	offset-distance: 0%;
+}
+img.showcase:nth-last-child(4):nth-child(2) {
+	offset-distance: 25%;
+}
+img.showcase:nth-last-child(3):nth-child(3) {
+	offset-distance: 51%;
+}
+img.showcase:nth-last-child(2):nth-child(4) {
+	offset-distance: 75%;
+}
+img.showcase:last-child:nth-child(5) {
+	offset-distance: 100%;
+}
+
+/* 3 images */
+img.showcase:nth-last-child(3):first-child {
+	offset-distance: 17%;
+}
+img.showcase:nth-last-child(2):nth-child(2) {
+	offset-distance: 49%;
+}
+img.showcase:last-child:nth-child(3) {
+	offset-distance: 81%;
+}
+
+.socials p {
+    text-align: left;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+}
+
+.icons img {
+    width: 30px;
+}
+
+.icons a {
+	display: inline-block;
+    padding: 0 5px;
+}
+
+.back-button {
+    padding: 10px 0px 0px 10px;
+    color: black;
+}
+
+.back-button:hover, .back-button:active {
+    color: grey;
+}
+
+/* Responsive main item */
+@media (max-width: 768px) {
+    .mobile {
+        display: block;
+        position: static;
+        margin: 50px;
+    }
+
+    .mobile p {
+        margin: auto 0;
+        height: 10vh;
+        top: 5%;
+        right: 5%;
+    }
+
+    .mobile img.showcase {
+        left: 90px;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .mobile img.showcase {
+        left: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .mobile p {
+        width: 50%;
+        scale: 0.7;
+        right: 5%;
+        margin: auto 0;
+        height: 10vh;
+    }
+
+    .mobile {
+        margin: 0;
+    }
+    .mobile img.showcase {
+        left: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile p {
+        scale: 0.55;
+        right: 10%;
+    }
+}
+
+@media (max-width: 300px) {
+    .mobile p {
+        scale: 0.45;
+        right: 10%;
+    }
+}

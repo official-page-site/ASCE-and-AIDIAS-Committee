@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #00bfa5;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logoimg {
+            border-radius: 12px;
+            width: 65px;
+            height: 65px;
+            transition: transform 0.3s ease;
+        }
+
+        .logoimg:hover {
+            transform: scale(1.1);
+        }
+
+        .anchors {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .anchors a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .anchors a:hover {
+            background-color: rgba(255, 230, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            width: 40px;
+            height: 3px;
+            background-color: white;
+            margin: 2.5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .anchors {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #00bfa5;
+                padding: 10px 0;
+                text-align: center;
+                border-radius: 0 0 12px 12px;
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            .anchors a {
+                padding: 15px 0;
+                border-bottom: 1px solid #6cd7c3;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .logoimg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .anchors a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/public/images/co_logo.png" class="logoimg" alt="CO Logo">
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <div class="anchors" id="navMenu">
+                <a id="Home" href="/">Home</a>
+                <a id="Members" href="/members.html">Members</a>
+                <a id="Magazines" href="/magazines.html">Magazines</a>
+                <a id="Events" href="/events.html">Events</a>
+                <a id="Resources" href="/resources.html">Resources</a>
+            </div>
+
+            <div class="logo">
+                <img src="/public/images/ai_logo.png" class="logoimg" alt="AI Logo">
+            </div>
+        </nav>
+    </header>
+
+    <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    menuToggle.addEventListener('click', function () {
+        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        menuToggle.classList.toggle('active');
+    });
+    </script>
+</body>
+
+</html>
