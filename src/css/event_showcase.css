@@ -180,7 +180,7 @@ img.showcase:last-child:nth-child(3) {
     }
 
     .mobile p {
-        margin: auto 0;
+        margin: 70px 0;
         height: 10vh;
         top: 5%;
         right: 5%;
@@ -199,14 +199,23 @@ img.showcase:last-child:nth-child(3) {
     .mobile img.showcase {
         left: 40px;
     }
+    .mobile {
+        scale: 0.85;
+    }
+    .mobile p {
+        position: relative;
+        right: 14vh;
+    }
 }
 
 @media (max-width: 500px) {
+    .mobile {
+        scale: 0.7;
+    }
     .mobile p {
         width: 50%;
-        scale: 0.7;
-        right: 5%;
-        margin: auto 0;
+        right: 10%;
+        margin: 60px 0;
         height: 10vh;
     }
 
@@ -219,15 +228,19 @@ img.showcase:last-child:nth-child(3) {
 }
 
 @media (max-width: 400px) {
-    .mobile p {
+    .mobile {
         scale: 0.55;
-        right: 10%;
+    }
+    .mobile p {
+        right: 36%;
     }
 }
 
 @media (max-width: 300px) {
-    .mobile p {
+    .mobile {
         scale: 0.45;
-        right: 10%;
+    }
+    .mobile p {
+        right: 60%;
     }
 }

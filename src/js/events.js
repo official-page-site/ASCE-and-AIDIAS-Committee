@@ -5,7 +5,10 @@ let slide = document.querySelector(".slide");
 items.forEach((item, index) => {
 	item.addEventListener("click", function () {
 		// Move the clicked item to the second position (nth-child(2))
-		reorderSlider(index);
+		if (!item.classList.contains("active"))
+        {
+            reorderSlider(index);
+        }
 	});
 });
 
@@ -27,8 +30,9 @@ next.addEventListener("click", function () {
 });
 
 prev.addEventListener("click", function () {
-	document.querySelector(".slide").prepend(items[items.length - 1]);
+    document.querySelector(".slide").prepend(items[items.length - 1]);
 	items = document.querySelectorAll(".item"); // Update NodeList
+    applyActiveClass();
 });
 
 function applyActiveClass() {
