@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="/src/css/header.css">
     <link rel="stylesheet" href="/src/css/footer.css">
     <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="/src/css/resources.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        header a#Resources {
+            color: #ffe600;
+        }
+        main {
+            position: static;
+            min-height: 65vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,11 +30,7 @@
 
     <!-- Main -->
     <main>
-        <div class="container">
-            <div class="year-div" onclick="redirectTo('first-year-resources.html')">First Year</div>
-            <div class="year-div" onclick="redirectTo('second-year-resources.html')">Second Year</div>
-            <div class="year-div" onclick="redirectTo('third-year-resources.html')">Third Year</div>
-        </div>
+
     </main>
 
     <!-- Footer -->
@@ -36,7 +41,6 @@
         $("#header").load("/src/pages/header.html");
         $("#footer").load("/src/pages/footer.html");
     </script>
-    <script src="/src/js/resources.js"></script>
 </body>
 
 </html>

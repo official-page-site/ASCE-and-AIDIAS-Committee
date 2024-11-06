@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     memberImages.forEach(img => {
         const backgroundImage = window.getComputedStyle(img).backgroundImage;
         if (backgroundImage === 'none' || backgroundImage.includes('error')) {
-            img.style.backgroundImage = 'url("/members/default-avatar.jpg")';
+            img.style.backgroundImage = 'url("/members/default-avatar.webp")';
         }
     });
     
