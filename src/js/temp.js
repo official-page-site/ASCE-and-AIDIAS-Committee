@@ -81,6 +81,24 @@
     });
   
     /**
+     * Toggle Eye - Visibility 
+    */
+    const toggleEyes = document.querySelectorAll('.toggle-eye'); // Select all elements with the class 'toggle-eye'
+
+toggleEyes.forEach(function(toggleEye) {
+  toggleEye.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    
+    const eyeopenElements = document.querySelectorAll('.eyeopen');
+    
+    eyeopenElements.forEach(function(element) {
+      element.classList.toggle('eyeclosed');
+    });
+  });
+});
+
+
+    /**
      * Initiate glightbox
      */
     const glightbox = GLightbox({
