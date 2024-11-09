@@ -693,7 +693,7 @@ section,
 			var(--background-color)
 		),
 		url("/public/images/back2.png") center top no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	z-index: 0;
 	border-radius: 0 0 50% 50%;
