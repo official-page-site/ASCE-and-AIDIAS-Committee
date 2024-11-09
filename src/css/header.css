@@ -9,7 +9,6 @@ body {
     background-color: #f0f0f0;
     color: #333;
     width: 100%;
-    margin-top: 85px !important;
     position: absolute;
 }
 
@@ -97,8 +96,9 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    body {
-        margin-top: 80px !important;
+    .navbar {
+        padding: 0;
+        margin: 10px 0;
     }
     .anchors {
         display: none;

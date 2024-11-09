@@ -1,4 +1,4 @@
-import './style.css'
+// import './style.css'
 
 // GSAP is not included by default, so we'll comment out the GSAP-related code
 const cursor = document.querySelector("#cursor")
