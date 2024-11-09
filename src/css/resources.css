@@ -1,3 +1,12 @@
+body {
+    margin-top: 85px;
+}
+@media (max-width: 768px) {
+    body {
+        margin-top: 80px;
+    }
+}
+
 header a#Resources {
     color: #ffe600;
 }

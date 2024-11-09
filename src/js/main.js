@@ -1,4 +1,4 @@
-import '../css/style.css'
+// import '../css/style.css'
 
 // Cursor functionality if elements exist
 const cursor = document.querySelector("#cursor")

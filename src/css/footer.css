@@ -3,7 +3,7 @@
 .dock-container {
 	margin: auto;
 }
-.row {
+.frow {
 	display: flex;
 	flex-wrap: wrap;
 }
