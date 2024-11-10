@@ -4,27 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources | ASCE and AIDIAS</title>
+    <title>Academic Resources | ASCE and AIDIAS</title>
     <link rel="stylesheet" href="/src/css/header.css">
     <link rel="stylesheet" href="/src/css/footer.css">
-    <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="/src/css/resources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
     <!-- Header -->
     <header id="header"></header>
 
-    <!-- Main -->
-    <main>
+    <!-- Main Content -->
+    <main class="resources-main">
         <div class="container">
-            <div class="year-div" onclick="redirectTo('first-year-resources.html')">First Year</div>
-            <div class="year-div" onclick="redirectTo('second-year-resources.html')">Second Year</div>
-            <div class="year-div" onclick="redirectTo('third-year-resources.html')">Third Year</div>
+            <!-- Sidebar for Branch Selection -->
+            <aside class="sidebar">
+                <h2>Select Branch</h2>
+                <ul>
+                    <li><button onclick="showBranch('CO')">Computer (CO)</button></li>
+                    <li><button onclick="showBranch('AN')">Artificial Intelligence (AN)</button></li>
+                </ul>
+
+                <!-- Year Selection Sidebar (Hidden until branch selected) -->
+                <div id="yearSelection" style="display: none;">
+                    <h2>Select Year</h2>
+                    <ul>
+                        <li><button onclick="showYear('year1')">Year 1</button></li>
+                        <li><button onclick="showYear('year2')">Year 2</button></li>
+                        <li><button onclick="showYear('year3')">Year 3</button></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Resource Content Area -->
+            <section class="content">
+                <div id="year1" class="year-panel" style="display: none;">
+                    <h3>Year 1</h3>
+                    <div class="semester">
+                        <h4>Semester 1</h4>
+                        <div class="card">
+                            <p>Mathematics I</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Physics</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Chemistry</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="semester">
+                        <h4>Semester 2</h4>
+                        <div class="card">
+                            <p>Mathematics II</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Computer Science Basics</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="year2" class="year-panel" style="display: none;">
+                    <h3>Year 2</h3>
+                    <div class="semester">
+                        <h4>Semester 3</h4>
+                        <div class="card">
+                            <p>Data Structures</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Algorithms</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="semester">
+                        <h4>Semester 4</h4>
+                        <div class="card">
+                            <p>Operating Systems</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Database Management</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="year3" class="year-panel" style="display: none;">
+                    <h3>Year 3</h3>
+                    <div class="semester">
+                        <h4>Semester 5</h4>
+                        <div class="card">
+                            <p>Networking</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Software Engineering</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="semester">
+                        <h4>Semester 6</h4>
+                        <div class="card">
+                            <p>Machine Learning</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                        <div class="card">
+                            <p>Artificial Intelligence</p>
+                            <a href="#" download class="download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -32,11 +126,12 @@
     <footer id="footer"></footer>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/src/js/resources.js"></script>
     <script>
         $("#header").load("/src/pages/header.html");
         $("#footer").load("/src/pages/footer.html");
     </script>
-    <script src="/src/js/resources.js"></script>
 </body>
 
 </html>
