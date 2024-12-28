@@ -6,19 +6,18 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--web-bg-light-theme-color);
+    color: var(--web-heading-light-theme-color);
     width: 100%;
     position: absolute;
 }
-
 .header {
     width: 100%;
-    background-color: #00bfa5;
+    background-color: var(--web-accent-light-theme-color);
     position: fixed;
     top: 0;
     z-index: 10;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--web-box-shadow-light-theme-color);
 }
 
 .navbar {
@@ -54,7 +53,7 @@ body {
 }
 
 .anchors a {
-    color: white;
+    color: var(--web-contrast-light-theme-color);
     text-decoration: none;
     font-weight: 600;
     padding: 8px 16px;
@@ -63,7 +62,7 @@ body {
 }
 
 .anchors a:hover {
-    background-color: rgba(255, 230, 0, 0.2);
+    color: var(--web-text-hover-light-theme-color);
     transform: scale(1.05);
 }
 
@@ -107,7 +106,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #00bfa5;
+        background-color: #2195f3;
         padding: 10px 0;
         text-align: center;
         border-radius: 0 0 12px 12px;
@@ -116,7 +115,7 @@ body {
 
     .anchors a {
         padding: 15px 0;
-        border-bottom: 1px solid #6cd7c3;
+        border-bottom: 1px solid #cffbff;
     }
 
     .menu-toggle {

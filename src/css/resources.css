@@ -10,6 +10,22 @@ body {
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    height: 100%; /* Ensure html and body take the full height of the viewport */
+    margin: 0; /* Remove any default margins */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+body > * {
+    flex-shrink: 0; /* Prevent children from shrinking */
+}
+
+main {
+    flex-grow: 1; /* Allow the main content to grow and fill available space */
+    padding-bottom: 20px; /* Keep space between content and footer */
+}
+
 .resources-main {
     padding-top: 80px;
     padding-bottom: 20px;
@@ -20,26 +36,40 @@ body {
     display: flex;
     gap: 20px;
     padding: 20px;
+    height: 100%; /* Ensure html and body take the full height of the viewport */
 }
 
 /* Sidebar */
 .sidebar {
     width: 200px;
-    background: #f4f4f4;
+    background: var(--web-surface-light-theme-color);
     padding: 15px;
     border-radius: 5px;
 }
 
 .sidebar h2 {
-    color: #333;
+    color: var(--web-heading-light-theme-color);
+    margin-bottom: 10px;
+}
+
+span#selected-info {
+    font-size: x-large;
+    font-family: 'Poppins';
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#selected-info > h3 {
+    color: var(--web-accent-light-theme-color);
     margin-bottom: 10px;
 }
 
 .sidebar button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--web-accent-light-theme-color);
+    color: var(--web-contrast-light-theme-color);
     border: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -47,14 +77,19 @@ body {
 }
 
 .sidebar button:hover {
-    background-color: #0056b3;
+    background-color: var(--web-button-hover-light-theme-color);
+}
+
+.sidebar button:active {
+    transform: translateY(2px);
+    color: var(--web-text-hover-light-theme-color);
 }
 
 /* Content Styling */
 .content {
     flex: 1;
     padding: 20px;
-    background: #f9f9f9;
+    background: var(--web-surface-light-theme-color);
     border-radius: 5px;
 }
 
@@ -63,23 +98,24 @@ body {
 }
 
 .year-panel h3 {
-    color: #007BFF;
+    color: var(--web-accent-light-theme-color);
     margin-bottom: 10px;
 }
 
 .semester h4 {
-    color: #333;
+    color: var(--web-heading-light-theme-color);
     font-weight: bold;
     margin-top: 10px;
 }
 
 /* Card Style for Subjects */
 .card {
-    background: white;
+    background: var(--web-surface-light-theme-color);
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--web-box-shadow-light-theme-color);
+    border: 1px solid var(--web-border-light-theme-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,16 +123,17 @@ body {
 
 .card p {
     margin: 0;
-    font-size: 1em;
-    color: #333;
+    font-size: 1.02em;
+    color: var(--web-heading-light-theme-color);
+    /* font-weight: bold; */
     text-wrap: wrap;
 }
 
 
 
 .download-btn {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--web-accent-light-theme-color);
+    color: var(--web-contrast-light-theme-color);
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 5px;
@@ -109,7 +146,7 @@ body {
 
 
 .download-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--web-button-hover-light-theme-color);
 }
 
 

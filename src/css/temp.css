@@ -7,10 +7,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-	--background-color: #ffffff; /* Background color for the entire website, including individual sections */
+	--background-color: #f4ffff; /* Background color for the entire website, including individual sections */
 	--default-color: #555555; /* Default color used for the majority of the text content across the entire website */
-	--heading-color: #1e4356; /* Color for headings, subheadings and title throughout the website */
-	--accent-color: #68a4c4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+	--heading-color: #212121; /* Color for headings, subheadings and title throughout the website */
+	--accent-color: #2195f3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
 	--surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
 	--contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -33,7 +33,7 @@
 }
 
 .dark-background {
-	--background-color: #1e4356;
+	--background-color: #2195f3e1;
 	--default-color: #ffffff;
 	--heading-color: #ffffff;
 	--surface-color: #284e62;
@@ -49,8 +49,8 @@
   # General Styling & Shared Classes
   --------------------------------------------------------------*/
 body {
-	color: var(--default-color);
-	background-color: var(--background-color);
+	color: var(--web-minor-text-light-theme-color);
+	background-color: var(--web-bg-light-theme-color);
 	font-family: var(--default-font);
 }
 
@@ -213,7 +213,7 @@ h6 {
 	--background-color: rgba(255, 255, 255, 0);
 	--default-color: #ffffff;
 	--heading-color: #ffffff;
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	background-color: var(--background-color);
 	transition: all 0.5s;
 	z-index: 997;
@@ -238,7 +238,7 @@ h6 {
 /* Global Header on Scroll
   ------------------------------*/
 .scrolled .header {
-	--background-color: #1e4356;
+	--background-color: #2196F3;
 }
 
 /*--------------------------------------------------------------
@@ -307,7 +307,7 @@ h6 {
 		transition: 0.3s;
 		border-radius: 4px;
 		z-index: 99;
-		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 30px var(--web-box-shadow-light-theme-color);
 	}
 
 	.navmenu .dropdown ul li {
@@ -379,7 +379,7 @@ h6 {
 		overflow-y: auto;
 		transition: 0.3s;
 		z-index: 9998;
-		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 0px 30px var(--web-box-shadow-light-theme-color);
 	}
 
 	.navmenu a,
@@ -437,7 +437,7 @@ h6 {
 		padding: 10px 0;
 		margin: 10px 20px;
 		background-color: var(--nav-dropdown-background-color);
-		border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+		border: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 90%);
 		box-shadow: none;
 		transition: all 0.5s ease-in-out;
 	}
@@ -486,7 +486,7 @@ h6 {
 	inset: 0;
 	z-index: 999999;
 	overflow: hidden;
-	background: var(--background-color);
+	background: var(--web-accent-light-theme-color);
 	transition: all 0.6s ease-out;
 }
 
@@ -559,8 +559,8 @@ h6 {
   # Global Page Titles & Breadcrumbs
   --------------------------------------------------------------*/
 .page-title {
-	color: var(--default-color);
-	background-color: var(--background-color);
+	color: var(--web-minor-text-light-theme-color);
+	background-color: var(--web-accent-light-theme-color);
 	padding: 160px 0 80px 0;
 	text-align: center;
 	position: relative;
@@ -568,7 +568,7 @@ h6 {
 
 .page-title:before {
 	content: "";
-	background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+	background-color: color-mix(in srgb, var(--web-accent-light-theme-color), transparent 50%);
 	position: absolute;
 	inset: 0;
 }
@@ -598,7 +598,7 @@ h6 {
 	content: "/";
 	display: inline-block;
 	padding-right: 10px;
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 50%);
 }
 
 /*--------------------------------------------------------------
@@ -606,8 +606,8 @@ h6 {
   --------------------------------------------------------------*/
 section,
 .section {
-	color: var(--default-color);
-	background-color: var(--background-color);
+	color: var(--web-minor-text-light-theme-color);
+	background-color: var(--web-bg-light-theme-color);
 	padding: 60px 0;
 	scroll-margin-top: 90px;
 	overflow: clip;
@@ -689,8 +689,8 @@ section,
 	height: 95%;
 	background: linear-gradient(
 			to right,
-			color-mix(in srgb, var(--background-color), transparent 90%),
-			var(--background-color)
+			color-mix(in srgb, var(--web-accent-light-theme-color) 4%, #00ffdd8c 70%),
+			color-mix(in srgb, var(--web-accent-light-theme-color), transparent 30%)
 		),
 		url("/public/images/back2.png") center top no-repeat;
 	background-size: contain;
@@ -707,8 +707,8 @@ section,
 	.hero::after {
 		background: linear-gradient(
 				to right,
-				color-mix(in srgb, var(--background-color), transparent 90%),
-				var(--background-color)
+				color-mix(in srgb, var(--web-accent-light-theme-color), #00ffdd71 90%),
+				color-mix(in srgb, var(--web-accent-light-theme-color), transparent 30%)
 			),
 			url("/public/images/back1.png") center top no-repeat;
 		background-size: contain;
@@ -725,11 +725,11 @@ section,
 	top: 0;
 	width: 130%;
 	height: 96%;
-	background: var(--background-color);
+	background: var(--web-accent-light-theme-color);
 	opacity: 0.3;
 	z-index: 0;
 	border-radius: 0 0 50% 50%;
-	transform: translateX(-50%) translateY(18px) rotate(2deg);
+	transform: translateX(-48%) translateY(0px) rotate(0deg);
 }
 
 .hero img {
@@ -769,7 +769,7 @@ section,
 .hero p {
 	width: 80%;
 	margin: 0 auto 30px auto;
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-contrast-light-theme-color), transparent 20%);
 	animation: fadeInDown 1s both 0.2s;
 }
 
@@ -797,7 +797,7 @@ section,
 	transition: 0.5s;
 	line-height: 1;
 	margin: 10px;
-	color: var(--default-color);
+	color: var(--web-contrast-light-theme-color);
 	animation: fadeInUp 1s both 0.4s;
 	border: 2px solid var(--accent-color);
 }
@@ -814,7 +814,7 @@ section,
 
 .hero .carousel-indicators li {
 	cursor: pointer;
-	background: var(--default-color);
+	background: var(--web-contrast-light-theme-color);
 	overflow: hidden;
 	border: 0;
 	width: 12px;
@@ -900,7 +900,7 @@ section,
 
 .featured-services .service-item {
 	background-color: var(--surface-color);
-	box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 5px 90px 0px var(--web-box-shadow-light-theme-color);
 	height: 100%;
 	padding: 40px 30px;
 	text-align: center;
@@ -940,7 +940,7 @@ section,
 }
 
 .featured-services .service-item:hover {
-	box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 5px 35px 0px var(--web-box-shadow-light-theme-color);
 }
 
 .featured-services .service-item.item-cyan .icon {
@@ -1062,7 +1062,7 @@ section,
   # Features Section
   --------------------------------------------------------------*/
 .features .features-item {
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 }
 
 .features .features-item + .features-item {
@@ -1121,7 +1121,7 @@ section,
 }
 
 .stats .stats-item p {
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	padding: 0;
 	margin: 0;
 	font-family: var(--heading-font);
@@ -1204,7 +1204,7 @@ section,
 .testimonials .testimonial-item .testimonial-img {
 	width: 120px;
 	border-radius: 50%;
-	border: 4px solid var(--background-color);
+	border: 4px solid var(--web-bg-light-theme-color);
 	margin: 0 auto;
 }
 
@@ -1216,7 +1216,7 @@ section,
 
 .testimonials .testimonial-item h4 {
 	font-size: 14px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	margin: 0 0 15px 0;
 }
 
@@ -1268,7 +1268,7 @@ section,
 	width: 12px;
 	height: 12px;
 	opacity: 1;
-	background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+	background-color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 85%);
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
@@ -1307,7 +1307,7 @@ section,
 .portfolio-details .portfolio-info {
 	background-color: var(--surface-color);
 	padding: 30px;
-	box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0 30px var(--web-box-shadow-light-theme-color);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1315,7 +1315,7 @@ section,
 	font-weight: 700;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+	border-bottom: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 85%);
 }
 
 .portfolio-details .portfolio-info ul {
@@ -1340,7 +1340,7 @@ section,
 
 .portfolio-details .portfolio-description p {
 	padding: 0;
-	color: color-mix(in srgb, var(--default-color), transparent 30%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 30%);
 }
 
 /*--------------------------------------------------------------
@@ -1349,7 +1349,7 @@ section,
 .service-details .service-box {
 	background-color: var(--surface-color);
 	padding: 20px;
-	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 2px 20px var(--web-box-shadow-light-theme-color);
 }
 
 .service-details .service-box + .service-box {
@@ -1359,7 +1359,7 @@ section,
 .service-details .service-box h4 {
 	font-size: 20px;
 	font-weight: 700;
-	border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+	border-bottom: 2px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 92%);
 	padding-bottom: 15px;
 	margin-bottom: 15px;
 }
@@ -1369,7 +1369,7 @@ section,
 }
 
 .service-details .services-list a {
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 	background-color: color-mix(in srgb, var(--default-color), transparent 96%);
 	display: flex;
 	align-items: center;
@@ -1403,12 +1403,12 @@ section,
 }
 
 .service-details .download-catalog a {
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	display: flex;
 	align-items: center;
 	padding: 10px 0;
 	transition: 0.3s;
-	border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+	border-top: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -1506,7 +1506,7 @@ section,
 	transition: all ease-in-out 0.3s;
 	text-align: center;
 	border-radius: 8px;
-	box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0 25px var(--web-box-shadow-light-theme-color);
 }
 
 .services .details h3 {
@@ -1517,7 +1517,7 @@ section,
 }
 
 .services .details p {
-	color: color-mix(in srgb, var(--default-color), transparent 10%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 10%);
 	line-height: 24px;
 	font-size: 14px;
 	margin-bottom: 0;
@@ -1537,7 +1537,7 @@ section,
 .pricing .pricing-item {
 	background-color: var(--surface-color);
 	padding: 60px 40px;
-	box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 3px 20px -2px var(--web-box-shadow-light-theme-color);
 	height: 100%;
 	position: relative;
 }
@@ -1560,14 +1560,14 @@ section,
 }
 
 .pricing h4 span {
-	color: color-mix(in srgb, var(--default-color), transparent 60%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 	font-size: 18px;
 }
 
 .pricing ul {
 	padding: 20px 0;
 	list-style: none;
-	color: color-mix(in srgb, var(--default-color), transparent 30%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 30%);
 	text-align: left;
 	line-height: 20px;
 }
@@ -1585,11 +1585,11 @@ section,
 }
 
 .pricing ul .na {
-	color: color-mix(in srgb, var(--default-color), transparent 60%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 }
 
 .pricing ul .na i {
-	color: color-mix(in srgb, var(--default-color), transparent 60%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 }
 
 .pricing ul .na span {
@@ -1597,12 +1597,12 @@ section,
 }
 
 .pricing .buy-btn {
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
-	background-color: var(--background-color);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
+	background-color: var(--web-accent-light-theme-color);
 	display: inline-block;
 	padding: 8px 35px 10px 35px;
 	border-radius: 4px;
-	border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+	border: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 	transition: none;
 	font-size: 16px;
 	font-weight: 500;
@@ -1647,7 +1647,7 @@ section,
 }
 
 .pricing .featured .buy-btn:hover {
-	background: color-mix(in srgb, var(--background-color), transparent 92%);
+	background: color-mix(in srgb, var(--web-accent-light-theme-color), transparent 92%);
 }
 
 /*--------------------------------------------------------------
@@ -1824,7 +1824,7 @@ section,
 	font-style: italic;
 	display: block;
 	font-size: 15px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	margin-bottom: 10px;
 }
 
@@ -1844,7 +1844,7 @@ section,
   --------------------------------------------------------------*/
 .blog-posts article {
 	background-color: var(--surface-color);
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 16px var(--web-box-shadow-light-theme-color);
 	padding: 30px;
 	height: 100%;
 	border-radius: 10px;
@@ -1859,7 +1859,7 @@ section,
 
 .blog-posts .post-category {
 	font-size: 16px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	margin-bottom: 10px;
 }
 
@@ -1892,7 +1892,7 @@ section,
 
 .blog-posts .post-date {
 	font-size: 14px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	margin-bottom: 0;
 }
 
@@ -1901,7 +1901,7 @@ section,
   --------------------------------------------------------------*/
 .blog-pagination {
 	padding-top: 0;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 }
 
 .blog-pagination ul {
@@ -1948,7 +1948,7 @@ section,
 .blog-details .article {
 	background-color: var(--surface-color);
 	padding: 30px;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 16px var(--web-box-shadow-light-theme-color);
 }
 
 .blog-details .post-img {
@@ -1984,7 +1984,7 @@ section,
 }
 
 .blog-details .content blockquote p {
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	line-height: 1.6;
 	margin-bottom: 0;
 	font-style: italic;
@@ -2006,7 +2006,7 @@ section,
 
 .blog-details .meta-top {
 	margin-top: 20px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 }
 
 .blog-details .meta-top ul {
@@ -2026,11 +2026,11 @@ section,
 	font-size: 16px;
 	margin-right: 8px;
 	line-height: 0;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 }
 
 .blog-details .meta-top a {
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	font-size: 14px;
 	display: inline-block;
 	line-height: 1;
@@ -2038,16 +2038,16 @@ section,
 
 .blog-details .meta-bottom {
 	padding-top: 10px;
-	border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+	border-top: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 90%);
 }
 
 .blog-details .meta-bottom i {
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	display: inline;
 }
 
 .blog-details .meta-bottom a {
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	transition: 0.3s;
 }
 
@@ -2079,7 +2079,7 @@ section,
 
 .blog-details .meta-bottom .tags li + li::before {
 	padding-right: 6px;
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	content: ",";
 }
 
@@ -2122,7 +2122,7 @@ section,
 
 .blog-comments .comment h5 a {
 	font-weight: bold;
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	transition: 0.3s;
 }
 
@@ -2132,7 +2132,7 @@ section,
 
 .blog-comments .comment h5 .reply {
 	padding-left: 10px;
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 }
 
 .blog-comments .comment h5 .reply i {
@@ -2142,7 +2142,7 @@ section,
 .blog-comments .comment time {
 	display: block;
 	font-size: 14px;
-	color: color-mix(in srgb, var(--default-color), transparent 40%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 40%);
 	margin-bottom: 5px;
 }
 
@@ -2161,7 +2161,7 @@ section,
 	background-color: var(--surface-color);
 	margin-top: 30px;
 	padding: 30px;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 16px var(--web-box-shadow-light-theme-color);
 }
 
 .comment-form form h4 {
@@ -2175,28 +2175,28 @@ section,
 
 .comment-form form input {
 	background-color: var(--surface-color);
-	color: var(--default-color);
-	border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+	color: var(--web-minor-text-light-theme-color);
+	border: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 70%);
 	font-size: 14px;
 	border-radius: 4px;
 	padding: 10px 10px;
 }
 
 .comment-form form input:focus {
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	background-color: var(--surface-color);
 	box-shadow: none;
 	border-color: var(--accent-color);
 }
 
 .comment-form form input::placeholder {
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 50%);
 }
 
 .comment-form form textarea {
 	background-color: var(--surface-color);
-	color: var(--default-color);
-	border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+	color: var(--web-minor-text-light-theme-color);
+	border: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 70%);
 	border-radius: 4px;
 	padding: 10px 10px;
 	font-size: 14px;
@@ -2204,14 +2204,14 @@ section,
 }
 
 .comment-form form textarea:focus {
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	box-shadow: none;
 	border-color: var(--accent-color);
 	background-color: var(--surface-color);
 }
 
 .comment-form form textarea::placeholder {
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 50%);
 }
 
 .comment-form form .form-group {
@@ -2236,7 +2236,7 @@ section,
   --------------------------------------------------------------*/
 .contact .info-item {
 	background-color: var(--surface-color);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px var(--web-box-shadow-light-theme-color);
 	padding: 24px 0 30px 0;
 }
 
@@ -2254,7 +2254,7 @@ section,
 }
 
 .contact .info-item h3 {
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 	font-size: 18px;
 	font-weight: 700;
 	margin: 10px 0;
@@ -2268,7 +2268,7 @@ section,
 
 .contact .php-email-form {
 	background-color: var(--surface-color);
-	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 20px var(--web-box-shadow-light-theme-color);
 	height: 100%;
 	padding: 30px 30px 0 30px;
 }
@@ -2286,9 +2286,9 @@ section,
 	padding: 10px 15px;
 	box-shadow: none;
 	border-radius: 0;
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	background-color: var(--surface-color);
-	border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+	border-color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 80%);
 }
 
 .contact .php-email-form input[type="text"]:focus,
@@ -2300,7 +2300,7 @@ section,
 .contact .php-email-form input[type="text"]::placeholder,
 .contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
-	color: color-mix(in srgb, var(--default-color), transparent 70%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 70%);
 }
 
 .contact .php-email-form button[type="submit"] {
@@ -2323,7 +2323,7 @@ section,
 	background-color: var(--surface-color);
 	padding: 30px;
 	margin: 60px 0 30px 0;
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 16px var(--web-box-shadow-light-theme-color);
 }
 
 .widget-title {
@@ -2351,7 +2351,7 @@ section,
 	font-size: 24px;
 	margin: 15px 0 0 0;
 	padding: 0;
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 }
 
 .blog-author-widget .social-links {
@@ -2359,7 +2359,7 @@ section,
 }
 
 .blog-author-widget .social-links a {
-	color: color-mix(in srgb, var(--default-color), transparent 60%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 	margin: 0 3px;
 	font-size: 18px;
 }
@@ -2370,13 +2370,13 @@ section,
 
 .blog-author-widget p {
 	font-style: italic;
-	color: color-mix(in srgb, var(--default-color), transparent 30%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 30%);
 	margin: 10px 0 0 0;
 }
 
 .search-widget form {
-	background: var(--background-color);
-	border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+	background: var(--web-bg-light-theme-color);
+	border: 1px solid color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 75%);
 	padding: 3px 10px;
 	position: relative;
 	border-radius: 50px;
@@ -2388,8 +2388,8 @@ section,
 	padding: 4px 10px;
 	border-radius: 4px;
 	width: calc(100% - 40px);
-	background-color: var(--background-color);
-	color: var(--default-color);
+	background-color: var(--web-bg-light-theme-color);
+	color: var(--web-minor-text-light-theme-color);
 }
 
 .search-widget form input[type="text"]:focus {
@@ -2398,7 +2398,7 @@ section,
 
 .search-widget form button {
 	background: none;
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -2437,7 +2437,7 @@ section,
 }
 
 .categories-widget ul a {
-	color: color-mix(in srgb, var(--default-color), transparent 20%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 20%);
 	transition: 0.3s;
 }
 
@@ -2447,7 +2447,7 @@ section,
 
 .categories-widget ul a span {
 	padding-left: 5px;
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 50%);
 	font-size: 14px;
 }
 
@@ -2472,7 +2472,7 @@ section,
 }
 
 .recent-posts-widget .post-item h4 a {
-	color: var(--default-color);
+	color: var(--web-minor-text-light-theme-color);
 	transition: 0.3s;
 }
 
@@ -2484,7 +2484,7 @@ section,
 	display: block;
 	font-style: italic;
 	font-size: 14px;
-	color: color-mix(in srgb, var(--default-color), transparent 50%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 50%);
 }
 
 .tags-widget ul {
@@ -2498,8 +2498,8 @@ section,
 }
 
 .tags-widget ul a {
-	background-color: color-mix(in srgb, var(--default-color), transparent 94%);
-	color: color-mix(in srgb, var(--default-color), transparent 30%);
+	background-color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 94%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 30%);
 	border-radius: 50px;
 	font-size: 14px;
 	padding: 5px 15px;
@@ -2515,6 +2515,6 @@ section,
 
 .tags-widget ul a span {
 	padding-left: 5px;
-	color: color-mix(in srgb, var(--default-color), transparent 60%);
+	color: color-mix(in srgb, var(--web-minor-text-light-theme-color), transparent 60%);
 	font-size: 14px;
 }

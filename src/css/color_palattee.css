@@ -1,0 +1,24 @@
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+	--web-bg-light-theme-color: #E3F2FD; /* Background color for the entire website, including individual sections */
+	--web-bg-dark-theme-color: #E3F2FD; /* Background color for the entire website, including individual sections */
+	--web-minor-text-light-theme-color: #555555; /* Default color used for the majority of the text content across the entire website */
+	--web-minor-text-dark-theme-color: #555555; /* Default color used for the majority of the text content across the entire website */
+	--web-heading-light-theme-color: #212121; /* Color for headings, subheadings and title throughout the website */
+	--web-heading-dark-theme-color: #212121; /* Color for headings, subheadings and title throughout the website */
+	--web-accent-light-theme-color: #2195f3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+	--web-accent-dark-theme-color: #2195f3; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+	--web-button-hover-light-theme-color: #2cbafc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+	--web-button-hover-dark-theme-color: #2cfcfc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+	--web-text-hover-light-theme-color: #FFEB3B; /* Text color for links and buttons when hovered over */
+	--web-text-hover-dark-theme-color: #FFEB3B; /* Text color for links and buttons when hovered over */
+	--web-surface-light-theme-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+	--web-surface-dark-theme-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+	--web-contrast-light-theme-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+	--web-contrast-dark-theme-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+	--web-contrast-minor-light-theme-color: #bbbbbb; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+    --web-box-shadow-light-theme-color: #E3F2FD; /* Box shadow color for elements like cards, buttons, and other components */
+    --web-box-shadow-dark-theme-color: #34546b; /* Box shadow color for elements like cards, buttons, and other components */
+	--web-footer-bg-color: #24262b; /* Background color for the footer section */
+	--web-border-light-theme-color: #0f1214; /* Border color for elements like cards, buttons, and other components */
+}
