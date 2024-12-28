@@ -8,7 +8,7 @@ body {
 }
 
 header a#Events {
-    color: #ffe600;
+    color: var(--web-text-hover-light-theme-color);
 }
 
 /* General reset */
@@ -21,19 +21,19 @@ header a#Events {
 /* Body styling */
 body {
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: var(--web-heading-light-theme-color);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f7f8fa;
+    background-color: var(--web-bg-light-theme-color);
 }
 
 /* show-Container styling */
 .show-container {
     max-width: 900px;
     width: 90%;
-    background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--web-surface-light-theme-color);
+    box-shadow: 0 4px 20px var(--web-box-shadow-light-theme-color);
     border-radius: 8px;
     overflow: hidden;
     margin: 20px auto;
@@ -53,14 +53,14 @@ body {
 
 h1 {
     font-size: 2em;
-    color: #333;
+    color: var(--web-heading-light-theme-color);
     margin-bottom: 10px;
 }
 
 /* Paragraph styling */
 p {
     font-size: 1em;
-    color: #666;
+    color: var(--web-minor-text-light-theme-color);
     line-height: 1.6;
 }
 
@@ -94,7 +94,7 @@ img.showcase {
 	position: absolute;
 	left: 0;
 	offset-path: path("m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30");
-	box-shadow: 1px 1px 3px #0008;
+	box-shadow: 1px 1px 3px var(--web-box-shadow-light-theme-color);
 	transition: transform 0.4s ease-out, offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84), box-shadow 0.3s,
 		z-index 0.3s;
 	z-index: 0;
@@ -104,7 +104,7 @@ img.showcase:hover {
 	transform: scale(3);
 	/* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
 	offset-path: path("m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0");
-	box-shadow: 3px 4px 10px #0006;
+	box-shadow: 3px 4px 10px var(--web-box-shadow-light-theme-color);
 	/* ensures that image gets on top of stack at the start of "popping" animation
 and gets back at the end of getting back. With smaller value, 2 different transitions would be needed */
 	z-index: 999;
@@ -177,7 +177,7 @@ img.showcase:last-child:nth-child(3) {
 }
 
 .back-button:hover, .back-button:active {
-    color: grey;
+    color: var(--web-accent-light-theme-color);
 }
 
 /* Responsive main item */

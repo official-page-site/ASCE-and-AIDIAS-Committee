@@ -13,7 +13,7 @@ body {
 }
 
 header a#Home {
-    color: #ffe600;
+    color: var(--web-text-hover-light-theme-color);
 }
 
 .intro-container {

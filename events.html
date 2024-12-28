@@ -1,116 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events | ASCE and AIDIAS</title>
+        <link rel="stylesheet" href="/src/css/color_palattee.css" />
+        <link rel="stylesheet" href="/src/css/header.css" />
+        <link rel="stylesheet" href="/src/css/footer.css" />
+        <link rel="stylesheet" href="/src/css/events.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | ASCE and AIDIAS</title>
-    <link rel="stylesheet" href="/src/css/header.css">
-    <link rel="stylesheet" href="/src/css/footer.css">
-    <link rel="stylesheet" href="/src/css/events.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <style>
-        body {
-            margin-top: 85px;
-        }
-        @media (max-width: 768px) {
+        <style>
             body {
-                margin-top: 80px;
+                margin-top: 85px;
             }
-        }
-    </style>
-</head>
-
-<body>
-    <!--Font Awesome CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Header -->
-    <header id="header"></header>
-
-    <!-- Main -->
-    <main>
-        <div class="slider-container">
-
-            <div class="slide">
-
-
-                <div class="item" style="background-image: url('/public/images/events/committee\ establishment/main.webp');">
-                    <div class="content">
-                        <div class="name">Committee Establishment</div>
-                            <div class="des">Committee got established on behalf of Teacher's Day Event.</div>
-                        <button onclick="window.location.href='/src/pages/events/committee_establishment.html';">See
-                            More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('/public/images/events/teacher\'s\ day\ 2k24/main.webp')">
-                    <div class="content">
-                        <div class="name">Teacher's Day 2k24</div>
-                        <div class="des">Executed first event of committee with full support and fun.</div>
-                        <button onclick="window.location.href='/src/pages/events/teachers_day_2k24.html';">See
-                            More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('/public/images/events/dussehra\ 2k24/main.webp')">
-                    <div class="content">
-                        <div class="name">Dussehra 2k24</div>
-                        <div class="des">Celebrated Dussehra with decorations, flowers, and posivite vibes.</div>
-                        <button onclick="window.location.href='/src/pages/events/dussehra_2k24.html';">See
-                            More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('/public/images/events/tree\ plantation.webp')">
-                    <div class="content">
-                        <div class="name">Tree Plantation</div>
-                        <div class="des">Planted Trees at our Department, came as a gift of Teacher's Day.</div>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('/public/images/grey.webp')">
-                    <div class="content">
-                        <div class="name">More Events in Future</div>
-                        <div class="des">Stay tuned for Future Event Updates!</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="button">
-                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer"></footer>
-
-    <!-- Scripts -->
-    <script>
-        $("#header").load("/src/pages/header.html");
-        $("#footer").load("/src/pages/footer.html");
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all anchor tags
-            const anchors = document.querySelectorAll('a');
-
-            // Loop through each anchor tag
-            anchors.forEach(anchor => {
-                // Check if the innerHTML is 'Magzine'
-                if (anchor.innerHTML.trim() == 'Events') {
-                    // Add the 'active' class
-                    anchor.classList.add('active');
+            @media (max-width: 768px) {
+                body {
+                    margin-top: 80px;
                 }
-            });
-        });
-    </script>
-    <script src="/src/js/events.js"></script>
-</body>
+            }
+        </style>
+    </head>
 
+    <body>
+        <!--Font Awesome CDN-->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Header -->
+        <header id="header"></header>
+
+        <!-- Main -->
+        <main>
+            <div class="slider-container">
+                <div class="slide">
+                    <div
+                        class="item"
+                        style="
+                            background-image: url('/public/images/events/committee\ establishment/main.webp');
+                        "
+                    >
+                        <div class="content">
+                            <div class="name">Committee Establishment</div>
+                            <div class="des">
+                                Committee got established on behalf of Teacher's
+                                Day Event.
+                            </div>
+                            <button
+                                onclick="window.location.href='/src/pages/events/committee_establishment.html';"
+                            >
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="item"
+                        style="
+                            background-image: url('/public/images/events/teacher\'s\ day\ 2k24/main.webp');
+                        "
+                    >
+                        <div class="content">
+                            <div class="name">Teacher's Day 2k24</div>
+                            <div class="des">
+                                Executed first event of committee with full
+                                support and fun.
+                            </div>
+                            <button
+                                onclick="window.location.href='/src/pages/events/teachers_day_2k24.html';"
+                            >
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="item"
+                        style="
+                            background-image: url('/public/images/events/dussehra\ 2k24/main.webp');
+                        "
+                    >
+                        <div class="content">
+                            <div class="name">Dussehra 2k24</div>
+                            <div class="des">
+                                Celebrated Dussehra with decorations, flowers,
+                                and posivite vibes.
+                            </div>
+                            <button
+                                onclick="window.location.href='/src/pages/events/dussehra_2k24.html';"
+                            >
+                                See More
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="item"
+                        style="
+                            background-image: url('/public/images/events/tree\ plantation.webp');
+                        "
+                    >
+                        <div class="content">
+                            <div class="name">Tree Plantation</div>
+                            <div class="des">
+                                Planted Trees at our Department, came as a gift
+                                of Teacher's Day.
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="item"
+                        style="
+                            background-image: url('/public/images/grey.webp');
+                        "
+                    >
+                        <div class="content">
+                            <div class="name">More Events in Future</div>
+                            <div class="des">
+                                Stay tuned for Future Event Updates!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button class="prev">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="next">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+
+        <!-- Scripts -->
+        <script>
+            $("#header").load("/src/pages/header.html");
+            $("#footer").load("/src/pages/footer.html");
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get all anchor tags
+                const anchors = document.querySelectorAll("a");
+
+                // Loop through each anchor tag
+                anchors.forEach((anchor) => {
+                    // Check if the innerHTML is 'Magzine'
+                    if (anchor.innerHTML.trim() == "Events") {
+                        // Add the 'active' class
+                        anchor.classList.add("active");
+                    }
+                });
+            });
+        </script>
+        <script src="/src/js/events.js"></script>
+    </body>
 </html>

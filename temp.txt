@@ -1,0 +1,32 @@
+Subject Page:::
+----------------
+
+Subject Title
+Subject Code
+Degree / Non-Degree
+Revision (6th/7th)
+
+Subject Description
+Marking Scheme
+
+Downloadable Files:
+- Curriculum
+- Notes
+- Reference Books
+- Question Papers
+
+Other Material:
+- Practicals
+- Assignments
+- Tutorials
+
+Evaluation:
+- Presentations
+- Report
+- Micro-Project
+
+Reference Links:
+- YouTube
+
+Contribute Material:
+- Google Form (Upload)
