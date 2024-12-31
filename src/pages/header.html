@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head> </head>
 
-<head>
-</head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img
+                        src="/public/images/co_logo.webp"
+                        class="logoimg"
+                        alt="CO Logo" />
+                </div>
 
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="/public/images/co_logo.webp" class="logoimg" alt="CO Logo">
-            </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
 
-            <div class="menu-toggle" id="menuToggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+                <div class="anchors" id="navMenu">
+                    <a id="Home" href="/">Home</a>
+                    <a id="Members" href="/members.html">Members</a>
+                    <a id="Magazines" href="/magazines.html">Magazines</a>
+                    <a id="Events" href="/events.html">Events</a>
+                    <a id="Resources" href="/resources.html">Resources</a>
+                    <!-- Theme toggle button -->
+                    <div class="theme-toggle">
+                        <button
+                            id="themeButton"
+                            class="theme-button"
+                            aria-label="Toggle Dark Mode">
+                            <i id="themeIcon" class="fas fa-sun"></i>
+                        </button>
+                    </div>
+                </div>
 
-            <div class="anchors" id="navMenu">
-                <a id="Home" href="/">Home</a>
-                <a id="Members" href="/members.html">Members</a>
-                <a id="Magazines" href="/magazines.html">Magazines</a>
-                <a id="Events" href="/events.html">Events</a>
-                <a id="Resources" href="/resources.html">Resources</a>
-            </div>
+                <div class="logo">
+                    <img
+                        src="/public/images/ai_logo.webp"
+                        class="logoimg"
+                        alt="AI Logo" />
+                </div>
+            </nav>
+        </header>
 
-            <div class="logo">
-                <img src="/public/images/ai_logo.webp" class="logoimg" alt="AI Logo">
-            </div>
-        </nav>
-    </header>
+        <script>
+            const menuToggle = document.getElementById("menuToggle");
+            const navMenu = document.getElementById("navMenu");
 
-    <script>
-        const menuToggle = document.getElementById("menuToggle");
-        const navMenu = document.getElementById("navMenu");
+            menuToggle.addEventListener("click", function () {
+                navMenu.style.display =
+                    navMenu.style.display === "flex" ? "none" : "flex";
+                menuToggle.classList.toggle("active");
+            });
+        </script>
+        <script>
+            const themeButton = document.getElementById("themeButton");
+            const themeIcon = document.getElementById("themeIcon");
+            const body = document.body;
 
-        menuToggle.addEventListener("click", function () {
-            navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
-            menuToggle.classList.toggle("active");
-        });
-    </script>
-</body>
+            // Load theme from local storage
+            const currentTheme = localStorage.getItem("theme") || "light";
+            if (currentTheme === "dark") {
+                body.setAttribute("data-theme", "dark");
+                themeIcon.className = "fas fa-moon";
+            } else {
+                themeIcon.className = "fas fa-sun";
+            }
 
+            themeButton.addEventListener("click", () => {
+                const newTheme =
+                    body.getAttribute("data-theme") === "dark"
+                        ? "light"
+                        : "dark";
+                body.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+
+                if (newTheme === "dark") {
+                    themeIcon.className = "fas fa-moon";
+                } else {
+                    themeIcon.className = "fas fa-sun";
+                }
+            });
+        </script>
+    </body>
 </html>

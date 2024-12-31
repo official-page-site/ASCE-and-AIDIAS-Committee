@@ -6,14 +6,13 @@ body {
     margin: 0;
     padding: 0;
     margin-top: 70px !important;
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     overflow-x: hidden;
 }
 
 header a#Home {
-    color: var(--web-text-hover-light-theme-color);
+    color: var(--web-text-hover-color);
 }
 
 .intro-container {
@@ -79,7 +78,7 @@ header a#Home {
 }
 
 #deco {
-    content: url('../../public/images/committee1.webp');
+    content: url("../../public/images/committee1.webp");
     height: 100%;
     width: fit-content;
     object-fit: cover;
@@ -87,7 +86,7 @@ header a#Home {
 }
 
 #commitee {
-    content: url('../../public/images/committee2.webp');
+    content: url("../../public/images/committee2.webp");
     height: 100%;
     width: fit-content;
     object-fit: cover;
@@ -95,7 +94,7 @@ header a#Home {
 }
 
 #topper {
-    content: url('../../public/images/committee3.webp');
+    content: url("../../public/images/committee3.webp");
     height: 100%;
     width: fit-content;
     object-fit: cover;
@@ -116,16 +115,16 @@ header a#Home {
     }
 }
 
-
 @media (max-width: 430px) {
     body {
         margin-top: 60px !important;
     }
 }
 
-
 @media (max-width: 300px) {
-    #deco, #commitee, #topper {
+    #deco,
+    #commitee,
+    #topper {
         height: 70%;
     }
 }
