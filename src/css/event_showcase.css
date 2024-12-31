@@ -8,7 +8,7 @@ body {
 }
 
 header a#Events {
-    color: var(--web-text-hover-light-theme-color);
+    color: var(--web-text-hover-color);
 }
 
 /* General reset */
@@ -20,20 +20,19 @@ header a#Events {
 
 /* Body styling */
 body {
-    font-family: 'Arial', sans-serif;
-    color: var(--web-heading-light-theme-color);
+    color: var(--web-heading-color);
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--web-bg-light-theme-color);
+    background-color: var(--web-bg-color);
 }
 
 /* show-Container styling */
 .show-container {
     max-width: 900px;
     width: 90%;
-    background-color: var(--web-surface-light-theme-color);
-    box-shadow: 0 4px 20px var(--web-box-shadow-light-theme-color);
+    background-color: var(--web-surface-color);
+    box-shadow: 0 4px 20px var(--web-box-shadow-color);
     border-radius: 8px;
     overflow: hidden;
     margin: 20px auto;
@@ -53,14 +52,14 @@ body {
 
 h1 {
     font-size: 2em;
-    color: var(--web-heading-light-theme-color);
+    color: var(--web-heading-color);
     margin-bottom: 10px;
 }
 
 /* Paragraph styling */
 p {
     font-size: 1em;
-    color: var(--web-minor-text-light-theme-color);
+    color: var(--web-minor-text-color);
     line-height: 1.6;
 }
 
@@ -83,73 +82,74 @@ p {
 }
 
 .desktop p {
-	height: 150px;
-	width: 500px;
-	margin: 50px auto;
-	position: relative;
+    height: 150px;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
 }
 
 img.showcase {
-	height: 100px;
-	position: absolute;
-	left: 0;
-	offset-path: path("m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30");
-	box-shadow: 1px 1px 3px var(--web-box-shadow-light-theme-color);
-	transition: transform 0.4s ease-out, offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84), box-shadow 0.3s,
-		z-index 0.3s;
-	z-index: 0;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    offset-path: path("m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30");
+    box-shadow: 1px 1px 3px var(--web-box-shadow-color);
+    transition: transform 0.4s ease-out,
+        offset-path 0.4s cubic-bezier(0.77, -1.17, 0.75, 0.84), box-shadow 0.3s,
+        z-index 0.3s;
+    z-index: 0;
 }
 
 img.showcase:hover {
-	transform: scale(3);
-	/* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
-	offset-path: path("m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0");
-	box-shadow: 3px 4px 10px var(--web-box-shadow-light-theme-color);
-	/* ensures that image gets on top of stack at the start of "popping" animation
+    transform: scale(3);
+    /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
+    offset-path: path("m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0");
+    box-shadow: 3px 4px 10px var(--web-box-shadow-color);
+    /* ensures that image gets on top of stack at the start of "popping" animation
 and gets back at the end of getting back. With smaller value, 2 different transitions would be needed */
-	z-index: 999;
+    z-index: 999;
 }
 
 /* 4 images */
 img.showcase:nth-last-child(4):first-child {
-	offset-distance: 10%;
+    offset-distance: 10%;
 }
 img.showcase:nth-last-child(3):nth-child(2) {
-	offset-distance: 35%;
+    offset-distance: 35%;
 }
 img.showcase:nth-last-child(2):nth-child(3) {
-	offset-distance: 65%;
+    offset-distance: 65%;
 }
 img.showcase:last-child:nth-child(4) {
-	offset-distance: 90%;
+    offset-distance: 90%;
 }
 
 /* 5 images */
 img.showcase:nth-last-child(5):first-child {
-	offset-distance: 0%;
+    offset-distance: 0%;
 }
 img.showcase:nth-last-child(4):nth-child(2) {
-	offset-distance: 25%;
+    offset-distance: 25%;
 }
 img.showcase:nth-last-child(3):nth-child(3) {
-	offset-distance: 51%;
+    offset-distance: 51%;
 }
 img.showcase:nth-last-child(2):nth-child(4) {
-	offset-distance: 75%;
+    offset-distance: 75%;
 }
 img.showcase:last-child:nth-child(5) {
-	offset-distance: 100%;
+    offset-distance: 100%;
 }
 
 /* 3 images */
 img.showcase:nth-last-child(3):first-child {
-	offset-distance: 17%;
+    offset-distance: 17%;
 }
 img.showcase:nth-last-child(2):nth-child(2) {
-	offset-distance: 49%;
+    offset-distance: 49%;
 }
 img.showcase:last-child:nth-child(3) {
-	offset-distance: 81%;
+    offset-distance: 81%;
 }
 
 .socials p {
@@ -167,17 +167,18 @@ img.showcase:last-child:nth-child(3) {
 }
 
 .icons a {
-	display: inline-block;
+    display: inline-block;
     padding: 0 5px;
 }
 
 .back-button {
     padding: 10px 0px 0px 10px;
-    color: black;
+    color: var(--web-heading-color);
 }
 
-.back-button:hover, .back-button:active {
-    color: var(--web-accent-light-theme-color);
+.back-button:hover,
+.back-button:active {
+    color: var(--web-accent-color);
 }
 
 /* Responsive main item */

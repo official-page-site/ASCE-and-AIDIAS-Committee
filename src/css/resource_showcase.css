@@ -4,11 +4,12 @@ main {
 
 h1,
 h2 {
-    color: #0056b3;
+    color: var(--web-heading-color);
 }
 
 .section > p {
     padding: 15px 0;
+    color: var(--web-minor-text-color);
 }
 
 .section {
@@ -18,8 +19,8 @@ h2 {
 /* Style for the tags */
 .tag {
     display: inline-block;
-    background-color: white; /* Light teal background */
-    color: #00796b; /* Dark teal text */
+    background-color: var(--web-surface-color);
+    color: var(--web-tag-color);
     font-weight: bold;
     border-radius: 50px; /* Makes it oval-shaped */
     padding: 0.2rem 0.5rem;
@@ -40,7 +41,7 @@ h2 {
 }
 
 .horizontal-scroll::-webkit-scrollbar-thumb {
-    background: #0074d9;
+    background: var(--web-accent-color);
     border-radius: 8px;
 }
 
@@ -48,9 +49,9 @@ h2 {
     flex: 0 0 auto;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--web-box-shadow-color);
     min-width: 250px;
-    background-color: white;
+    background-color: var(--web-surface-color);
     margin: 15px 0;
 }
 
@@ -64,13 +65,13 @@ h2 {
 
 .block-item a {
     text-decoration: none;
-    color: #2195f3;
+    color: var(--web-accent-color);
     font-weight: bold;
     display: block;
     /* position: relative; */
     width: 100%;
     right: 11%;
-    background-color: white;
+    background-color: var(--web-surface-color);
     border-radius: 5px;
     margin-top: 0.5rem;
 }
@@ -81,8 +82,8 @@ h2 {
 
 .button {
     display: inline-block;
-    background-color: #0074d9;
-    color: #fff;
+    background-color: var(--web-accent-color);
+    color: var(--web-contrast-color);
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
@@ -92,7 +93,7 @@ h2 {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: var(--web-button-hover-color);
 }
 
 .footer-links {
@@ -118,9 +119,9 @@ h2 {
     border-collapse: separate; /* Use separate borders for rounded corners */
     border-spacing: 0; /* Removes spacing between cells */
     margin: 1rem 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #000000; /* Thick border around the table */
+    background-color: var(--web-surface-color);
+    box-shadow: 0 4px 8px var(--web-box-shadow-color);
+    border: 2px solid var(--web-border-color); /* Thick border around the table */
     border-radius: 12px; /* Rounded corners for the table */
     overflow: hidden;
 }
@@ -129,12 +130,12 @@ h2 {
 .modern-table td {
     padding: 12px 15px;
     text-align: center;
-    border: 2px solid #000000; /* Thick border for each cell */
+    border: 2px solid var(--web-border-color); /* Thick border for each cell */
 }
 
 .modern-table thead {
-    background-color: #0056b3;
-    color: white;
+    background-color: var(--web-accent-color);
+    color: var(--web-contrast-color);
 }
 
 .modern-table th {
@@ -143,8 +144,8 @@ h2 {
 }
 
 .modern-table td {
-    color: #212529;
-    font-weight: 500;
+    color: var(--web-heading-color);
+    font-weight: bold;
 }
 
 .modern-table th[colspan] {
@@ -152,11 +153,7 @@ h2 {
 }
 
 .modern-table tbody tr:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-
-.modern-table tbody tr:hover {
-    background-color: #e9ecef;
+    background-color: var(--web-surface-color);
 }
 
 /* Rounded corners for table cells */
@@ -185,7 +182,7 @@ h2 {
 }
 
 .sub-section::-webkit-scrollbar-thumb {
-    background: #0074d9;
+    background: var(--web-accent-color);
     border-radius: 8px;
 }
 
@@ -196,11 +193,11 @@ h2 {
     justify-content: space-between;
     width: 138px;
     overflow: hidden;
-    background-color: #2195f3;
+    background-color: var(--web-accent-color);
     padding: 12px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--web-box-shadow-color);
     margin: 15px 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -221,7 +218,7 @@ h2 {
 
 .pdf-container:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--web-box-shadow-color);
 }
 
 .pdf-title,
@@ -230,34 +227,41 @@ h2 {
     text-align: center;
 }
 .pdf-title {
-    color: white;
+    color: var(--web-contrast-color);
     font-weight: bold;
     font-size: 1.2rem;
 }
 
 .pdf-author {
-    color: #6ac7ff;
+    color: var(--web-content1-color);
     font-weight: bold;
     font-size: 0.75rem;
 }
 
 .pdf-container:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--web-box-shadow-color);
 }
 
 .pdf-container > a {
     text-decoration: none;
-    color: #2195f3;
+    color: var(--web-accent-color);
     font-weight: bold;
     display: block;
     /* position: relative; */
     width: 100%;
     right: 11%;
-    background-color: white;
+    background-color: var(--web-contrast-color);
     border-radius: 5px;
     margin-top: 0.5rem;
 }
+
+.pdf-container > a:hover {
+    text-decoration: none;
+    background-color: var(--web-contrast-button-hover-color);
+    color: var(--web-contrast-color);
+}
+
 .pdf-container img {
     width: 100%;
     height: 100px;
@@ -267,7 +271,6 @@ h2 {
 }
 
 .breadcrumb {
-    background-color: #e0f4fc;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 8px;
@@ -279,7 +282,7 @@ h2 {
 
 .breadcrumb a {
     text-decoration: none;
-    color: #0056b3;
+    color: var(--web-breadcrumb-color);
     font-weight: bold;
     display: inline-block; /* Add inline-block to make vertical-align work */
 }
@@ -287,7 +290,7 @@ h2 {
 .breadcrumb a::after {
     content: ">";
     margin-left: 8px;
-    color: #333;
+    color: var(--web-heading-color);
     font-weight: normal;
     vertical-align: middle; /* Ensures the symbol stays vertically centered */
 }

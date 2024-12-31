@@ -7,7 +7,7 @@
 
 /* Body and Layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
 html,
@@ -47,34 +47,33 @@ main {
 /* Sidebar */
 .sidebar {
     width: 200px;
-    background: var(--web-surface-light-theme-color);
+    background: var(--web-surface-color);
     padding: 15px;
     border-radius: 5px;
 }
 
 .sidebar h2 {
-    color: var(--web-heading-light-theme-color);
+    color: var(--web-heading-color);
     margin-bottom: 10px;
 }
 
 span#selected-info {
     font-size: x-large;
     font-family: "Poppins";
-    color: black;
     font-weight: bold;
     text-align: center;
 }
 
 #selected-info > h3 {
-    color: var(--web-accent-light-theme-color);
+    color: var(--web-accent-color);
     margin-bottom: 10px;
 }
 
 .sidebar button {
     width: 100%;
     padding: 10px;
-    background-color: var(--web-accent-light-theme-color);
-    color: var(--web-contrast-light-theme-color);
+    background-color: var(--web-accent-color);
+    color: var(--web-contrast-color);
     border: none;
     border-radius: 5px;
     margin-top: 10px;
@@ -82,19 +81,19 @@ span#selected-info {
 }
 
 .sidebar button:hover {
-    background-color: var(--web-button-hover-light-theme-color);
+    background-color: var(--web-button-hover-color);
 }
 
 .sidebar button:active {
     transform: translateY(2px);
-    color: var(--web-text-hover-light-theme-color);
+    color: var(--web-text-hover-color);
 }
 
 /* Content Styling */
 .content {
     flex: 1;
     padding: 20px;
-    background: var(--web-surface-light-theme-color);
+    background: var(--web-surface-color);
     border-radius: 5px;
 }
 
@@ -103,24 +102,24 @@ span#selected-info {
 }
 
 .year-panel h3 {
-    color: var(--web-accent-light-theme-color);
+    color: var(--web-accent-color);
     margin-bottom: 10px;
 }
 
 h4.semester {
-    color: var(--web-heading-light-theme-color);
+    color: var(--web-heading-color);
     font-weight: bold;
     margin-top: 10px;
 }
 
 /* Card Style for Subjects */
 .card {
-    background: var(--web-surface-light-theme-color);
+    background: var(--web-surface-color);
     padding: 15px;
     margin: 10px 0;
     border-radius: 8px;
-    box-shadow: 0 4px 12px var(--web-box-shadow-light-theme-color);
-    border: 1px solid var(--web-border-light-theme-color);
+    box-shadow: 0 4px 12px var(--web-box-shadow-color);
+    border: 1px solid var(--web-border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,26 +128,26 @@ h4.semester {
 .card p {
     margin: 0;
     font-size: 1.02em;
-    color: var(--web-heading-light-theme-color);
+    color: var(--web-heading-color);
     /* font-weight: bold; */
     text-wrap: wrap;
 }
 
 .download-btn {
-    background-color: var(--web-accent-light-theme-color);
-    color: var(--web-contrast-light-theme-color);
+    background-color: var(--web-accent-color);
+    color: var(--web-contrast-color);
     padding: 8px 12px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9em;
     white-space: nowrap; /* Prevent text wrapping */
-    width: 120px; /* Set a consistent width for all buttons */
+    width: 1.2in; /* Set a consistent width for all buttons */
     text-align: center; /* Center-align text within the button */
     display: inline-block;
 }
 
 .download-btn:hover {
-    background-color: var(--web-button-hover-light-theme-color);
+    background-color: var(--web-button-hover-color);
 }
 
 #yearSelection {
