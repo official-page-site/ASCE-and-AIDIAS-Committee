@@ -1,0 +1,297 @@
+main {
+    padding: 1.5rem;
+}
+
+h1,
+h2 {
+    color: #0056b3;
+}
+
+.section > p {
+    padding: 15px 0;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+/* Style for the tags */
+.tag {
+    display: inline-block;
+    background-color: white; /* Light teal background */
+    color: #00796b; /* Dark teal text */
+    font-weight: bold;
+    border-radius: 50px; /* Makes it oval-shaped */
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-left: 0.5rem; /* Adds spacing from the preceding text */
+}
+
+.horizontal-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #0074d9;
+    border-radius: 8px;
+}
+
+.block-item {
+    flex: 0 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    background-color: white;
+    margin: 15px 0;
+}
+
+.block-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.block-item a {
+    text-decoration: none;
+    color: #2195f3;
+    font-weight: bold;
+    display: block;
+    /* position: relative; */
+    width: 100%;
+    right: 11%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.block-item a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    background-color: #0074d9;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.footer-links {
+    font-size: 0.875rem;
+}
+
+.subject-image {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    object-fit: cover; /* Ensures the image fills the space without stretching */
+    object-position: center; /* Adjusts the visible area, focusing on the center */
+}
+
+.scrollable-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Adds smooth scrolling on iOS devices */
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: separate; /* Use separate borders for rounded corners */
+    border-spacing: 0; /* Removes spacing between cells */
+    margin: 1rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000000; /* Thick border around the table */
+    border-radius: 12px; /* Rounded corners for the table */
+    overflow: hidden;
+}
+
+.modern-table th,
+.modern-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 2px solid #000000; /* Thick border for each cell */
+}
+
+.modern-table thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+.modern-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modern-table td {
+    color: #212529;
+    font-weight: 500;
+}
+
+.modern-table th[colspan] {
+    text-align: center;
+}
+
+.modern-table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Rounded corners for table cells */
+.modern-table thead tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+.modern-table thead tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+.modern-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+.modern-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.sub-section {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.sub-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sub-section::-webkit-scrollbar-thumb {
+    background: #0074d9;
+    border-radius: 8px;
+}
+
+.pdf-container {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 138px;
+    overflow: hidden;
+    background-color: #2195f3;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .pdf-container {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    background-color: white;
+    margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+.pdf-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-title,
+.pdf-author {
+    margin: 0;
+    text-align: center;
+}
+.pdf-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.pdf-author {
+    color: #6ac7ff;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.pdf-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-container > a {
+    text-decoration: none;
+    color: #2195f3;
+    font-weight: bold;
+    display: block;
+    /* position: relative; */
+    width: 100%;
+    right: 11%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+.pdf-container img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+    background-color: #e0f4fc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    display: inline-block; /* Add inline-block to make vertical-align work */
+}
+
+.breadcrumb a::after {
+    content: ">";
+    margin-left: 8px;
+    color: #333;
+    font-weight: normal;
+    vertical-align: middle; /* Ensures the symbol stays vertically centered */
+}
+
+.breadcrumb a:last-child::after {
+    content: ""; /* Remove the symbol on the last breadcrumb */
+}

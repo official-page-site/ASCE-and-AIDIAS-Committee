@@ -10,8 +10,7 @@
         <link rel="stylesheet" href="/src/css/resources.css" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        />
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     </head>
 
     <body>
@@ -38,7 +37,7 @@
                     </ul>
 
                     <!-- Year Selection Sidebar (Hidden until branch selected) -->
-                    <div id="yearSelection" style="display: none">
+                    <div id="yearSelection">
                         <h2>Select Year</h2>
                         <ul>
                             <li>
@@ -60,88 +59,1556 @@
                     </div>
                 </aside>
 
-                <!-- Main Resource Content Area -->
+                <section class="get-form" id="selection-panel">
+                    GET Form
+                    <h3>Get Resources via URL</h3>
+                    <form method="get">
+                        <label for="branch">Select Branch:</label>
+                        <select id="branch" name="branch">
+                            <option value="CO">Computer (CO)</option>
+                            <option value="AN">
+                                Artificial Intelligence (AN)
+                            </option>
+                        </select>
+
+                        <label for="year">Select Year:</label>
+                        <select id="year" name="year">
+                            <option value="year1">1st Year</option>
+                            <option value="year2">2nd Year</option>
+                            <option value="year3">3rd Year</option>
+                        </select>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </section>
+
                 <section class="content">
                     <span id="selected-info">
                         Please select a branch and year.
                     </span>
 
-                    <div id="year1" class="year-panel" style="display: none">
-                        <!-- <h3>Year 1</h3> -->
-                        <div class="semester">
-                            <h4>Semester 1</h4>
+                    <div id="cardsContainer">
+                        <!-- 
+                            Subjects for CO, Year 1
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <h4 class="semester">Semester 1 (CO)</h4>
                             <div class="card">
-                                <p>Mathematics I</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Physics</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Chemistry</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                        </div>
-                        <div class="semester">
-                            <h4>Semester 2</h4>
-                            <div class="card">
-                                <p>Mathematics II</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Computer Science Basics</p>
-                                <a href="#" class="download-btn">Visit Page</a>
+                                <p>
+                                    <strong>M1 (BMT)</strong> - Basic
+                                    Mathematics
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
                             </div>
                         </div>
-                    </div>
-                    <div id="year2" class="year-panel" style="display: none">
-                        <!-- <h3>Year 2</h3> -->
-                        <div class="semester">
-                            <h4>Semester 3</h4>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
                             <div class="card">
-                                <p>Data Structures</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Algorithms</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                        </div>
-                        <div class="semester">
-                            <h4>Semester 4</h4>
-                            <div class="card">
-                                <p>Operating Systems</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Database Management</p>
-                                <a href="#" class="download-btn">Visit Page</a>
+                                <p><strong>EP</strong> - Engineering Physics</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
                             </div>
                         </div>
-                    </div>
-                    <div id="year3" class="year-panel" style="display: none">
-                        <!-- <h3>Year 3</h3> -->
-                        <div class="semester">
-                            <h4>Semester 5</h4>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
                             <div class="card">
-                                <p>Networking</p>
-                                <a href="#" class="download-btn">Visit Page</a>
-                            </div>
-                            <div class="card">
-                                <p>Software Engineering</p>
-                                <a href="#" class="download-btn">Visit Page</a>
+                                <p>
+                                    <strong>FCIT</strong> - Fundamentals of
+                                    Computer & Internet Technology
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
                             </div>
                         </div>
-                        <div class="semester">
-                            <h4>Semester 6</h4>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
                             <div class="card">
-                                <p>Machine Learning</p>
-                                <a href="#" class="download-btn">Visit Page</a>
+                                <p>
+                                    <strong>BCS</strong> - Basics Computer
+                                    Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
                             </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
                             <div class="card">
-                                <p>Artificial Intelligence</p>
-                                <a href="#" class="download-btn">Visit Page</a>
+                                <p><strong>ENG</strong> - English</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DLS</strong> - Development of Life
+                                    Skill
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EVS</strong> - Environmental Science
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <h4 class="semester">Semester 2 (CO)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>M2 (EMT)</strong> - Engineering
+                                    Mathematics
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EC</strong> - Engineering Chemistry
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>WP</strong> - Workshop Practice</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EEE</strong> - Elements of
+                                    Electronics & Electrical Engineering
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>CP</strong> - C Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>SWPDL</strong> - Static Web Page
+                                    Designing Lab
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>CMS</strong> - Communication Skills
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 
+                            Subjects for AN, Year 1 
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <h4 class="semester">Semester 1 (AN)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>M1 (BMT)</strong> - Basic
+                                    Mathematics
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>EP</strong> - Engineering Physics</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>FCIT</strong> - Fundamentals of
+                                    Computer & Internet Technology
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>BCS</strong> - Basics Computer
+                                    Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>ENG</strong> - English</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DLS</strong> - Development of Life
+                                    Skill
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EVS</strong> - Environmental Science
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <h4 class="semester">Semester 2 (AN)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>M2 (EMT)</strong> - Engineering
+                                    Mathematics
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EC</strong> - Engineering Chemistry
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>WP</strong> - Workshop Practice</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>EEE</strong> - Elements of
+                                    Electronics & Electrical Engineering
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>CP</strong> - C Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>SWPDL</strong> - Static Web Page
+                                    Designing Lab
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year1"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>CMS</strong> - Communication Skills
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 
+                            Subjects for CO, Year 2
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <h4 class="semester">Semester 3 (CO)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>CHMT</strong> - Computer Hardware &
+                                    Maintenance with Troubleshooting
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>DE</strong> - Digital Electronics</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>MT</strong> - Multimedia Techniques
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>OOP-CPP</strong> - Object Oriented
+                                    Programming using C++
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>RDBMS</strong> - Relational Database
+                                    Management Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>SE</strong> - Software Engineering
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <h4 class="semester">Semester 4 (CO)</h4>
+                            <div class="card">
+                                <p><strong>DS</strong> - Data Structures</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>MPP</strong> - Microprocessor &
+                                    Programming
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>SDT</strong> - Software Development
+                                    Tool
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>JP</strong> - JAVA Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>OS</strong> - Operating Systems</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>PHP</strong> - PHP programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>RP</strong> - Ruby programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>PP</strong> - Python Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>AP</strong> - Android Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 
+                            Subjects for AN, Year 2 
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <h4 class="semester">Semester 3 (AN)</h4>
+                            <div class="card">
+                                <p><strong>DE</strong> - Digital Electronics</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>PP</strong> - Python Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>DS</strong> - Data Structures</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DSTV</strong> - Data Story Telling
+                                    and Visualization
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>RDBMS</strong> - Relational Database
+                                    Management Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>MML</strong> - Mathematics for
+                                    Machine Learning
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <h4 class="semester">Semester 4 (AN)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>OOPJ</strong> - Object Oriented
+                                    Programming using Java
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>MP</strong> - Microprocessor</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>WPP</strong> - Web Programming with
+                                    Python
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>OS</strong> - Operating Systems</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>AI</strong> - Artificial
+                                    Intelligence
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>OSTL</strong> - Open Source
+                                    Technology Laboratory
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>AP</strong> - Android Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year2"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>RP</strong> - R Programming</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 
+                            Subjects for CO, Year 3
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <h4 class="semester">Semester 5 (CO)</h4>
+                            <div class="card">
+                                <p><strong>CN</strong> - Computer Network</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>IOM</strong> - Industrial
+                                    Organization and Management
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>AMM</strong> - Advanced
+                                    microprocessors & Microcontrollers
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>MOC</strong> - Mobile Computing</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>LPL</strong> - Linux Programming Lab
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>ISMS</strong> - Information Storage
+                                    Management System
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DWM</strong> - Data Warehousing &
+                                    Mining
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>CC</strong> - Cloud Computing</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>SMR</strong> - Seminar</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <h4 class="semester">Semester 6 (CO)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>ED</strong> - Entrepreneurship
+                                    Development
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>CSCL</strong> - Computer Security &
+                                    Cyber Laws
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>PW</strong> - Project Work</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>AJP</strong> - Advanced JAVA
+                                    Programming
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>ST</strong> - Software Testing</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>ADBMS</strong> - Advanced Database
+                                    Management Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>GIS</strong> - Geographical
+                                    Information System
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>OTU</strong> - Object Technology &
+                                    UML
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="CO"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>VT</strong> - Implant(Vocational)
+                                    Training
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <!-- 
+                            Subjects for AN, Year 3
+                        -->
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <h4 class="semester">Semester 5 (AN)</h4>
+                            <div class="card">
+                                <p><strong>ML</strong> - Machine Learning</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DHP</strong> - Data Handling in
+                                    Python
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>CC</strong> - Cloud Computing</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>BCS</strong> - Basics Computer
+                                    Systems
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>CN</strong> - Computer Network</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>SMR</strong> - Seminar</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>SET</strong> - Software Engineering
+                                    and Testing
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>BDA</strong> - Big Data Analytics</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>DMW</strong> - Data Mining and
+                                    Warehouse
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>ADBMS</strong> - Advance Database
+                                    Management System
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <h4 class="semester">Semester 6 (AN)</h4>
+                            <div class="card">
+                                <p>
+                                    <strong>ED</strong> - Entrepreneurship
+                                    Development
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>NLP</strong> - Natural Language
+                                    Processing
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>NMA</strong> - Network Management &
+                                    Administration
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>PRJ</strong> - Project</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>VT</strong> - Vocational Training</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>NIS</strong> - Network and
+                                    Information Security
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>IOM</strong> - Industrial
+                                    Organization and Management
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>IOT</strong> - Internet of Things</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p>
+                                    <strong>IDL</strong> - Introduction to Deep
+                                    Learning
+                                </p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
+                            </div>
+                        </div>
+                        <div
+                            class="subject-card"
+                            data-branch="AN"
+                            data-year="year3"
+                            style="display: none">
+                            <div class="card">
+                                <p><strong>DSC</strong> - Data Science</p>
+                                <a
+                                    href="./src/pages/resources/subject_page_template.html"
+                                    class="download-btn"
+                                    >Visit Page</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -158,6 +1625,23 @@
         <script>
             $("#header").load("/src/pages/header.html");
             $("#footer").load("/src/pages/footer.html");
+        </script>
+        <script>
+            // JavaScript to process query params
+            const urlParams = new URLSearchParams(window.location.search);
+            const branch = urlParams.get("branch");
+            const year = urlParams.get("year");
+
+            if (branch && year) {
+                showBranch(branch);
+                showYear(year);
+            }
+            if (year) {
+                showYear(year);
+            }
+            if (branch) {
+                showBranch(branch);
+            }
         </script>
     </body>
 </html>
