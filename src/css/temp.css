@@ -67,6 +67,10 @@ a:hover {
     text-decoration: none;
 }
 
+header a#Home {
+    color: var(--web-text-hover-color);
+}
+
 h1,
 h2,
 h3,
