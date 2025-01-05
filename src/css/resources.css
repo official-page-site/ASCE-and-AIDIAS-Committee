@@ -10,6 +10,10 @@ body {
     font-family: "Poppins", Arial, sans-serif;
 }
 
+header a#Resources {
+    color: var(--web-text-hover-color);
+}
+
 html,
 body {
     height: 100%; /* Ensure html and body take the full height of the viewport */
