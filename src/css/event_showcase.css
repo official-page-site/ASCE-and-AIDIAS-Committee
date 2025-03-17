@@ -27,6 +27,36 @@ body {
     background-color: var(--web-bg-color);
 }
 
+.alignment {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.alignment li {
+    padding-bottom: 10px;
+}
+
+.sublist {
+    padding-left: 30px;
+}
+
+.image-leaflet-container {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.image-leaflet-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
+    display: block;
+}
+
 /* show-Container styling */
 .show-container {
     max-width: 900px;
@@ -167,7 +197,9 @@ img.showcase:last-child:nth-child(3) {
 }
 
 .icons a {
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
     padding: 0 5px;
 }
 
